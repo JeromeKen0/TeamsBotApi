@@ -1,0 +1,97 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Logan\\source\\repos\\TeamsBotApi\\TeamsApiBot\\TeamsApiBot.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Logan\\source\\repos\\TeamsBotApi\\TeamsApiBot\\TeamsApiBot.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Logan\\source\\repos\\TeamsBotApi\\TeamsApiBot\\TeamsApiBot.csproj",
+        "projectName": "TeamsApiBot",
+        "projectPath": "C:\\Users\\Logan\\source\\repos\\TeamsBotApi\\TeamsApiBot\\TeamsApiBot.csproj",
+        "packagesPath": "C:\\Users\\Logan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Logan\\source\\repos\\TeamsBotApi\\TeamsApiBot\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Logan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.17, )"
+            },
+            "Microsoft.Azure.KeyVault": {
+              "target": "Package",
+              "version": "[3.0.5, )"
+            },
+            "Microsoft.Graph": {
+              "target": "Package",
+              "version": "[3.18.0, )"
+            },
+            "Microsoft.Graph.Auth": {
+              "target": "Package",
+              "version": "[1.0.0-preview.5, )"
+            },
+            "Microsoft.IdentityModel.Clients.ActiveDirectory": {
+              "target": "Package",
+              "version": "[5.2.8, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.3.3, )"
+            },
+            "Telegram.Bot": {
+              "target": "Package",
+              "version": "[16.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
