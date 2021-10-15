@@ -11,6 +11,7 @@ using TeamsApiBot.Configs;
 using TeamsApiBot.HttpClients;
 using TeamsApiBot.Models;
 using TeamsApiBot.Services;
+using Telegram.Bot;
 
 namespace TeamsApiBot.Controllers
 {
@@ -90,10 +91,10 @@ namespace TeamsApiBot.Controllers
             return Ok(HRmessages);
         }
         [Route("/SendMessage")]
-        public async Task<IActionResult> SendMessageTest()
+        public async Task<IActionResult> SendMessageTest([FromServices] TelegramBotClient telegramBotClient)
         {
-            var isok = await _graphService.SendMessage("chat test", _CacheManage.GetChat().id);
-            return Ok(isok);
+            await telegramBotClient.SendTextMessageAsync("@TeamsChatNotify", "测试消息");
+            return Ok();
         }
     }
 }

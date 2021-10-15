@@ -19,10 +19,12 @@ namespace TeamsApiBot.Jobs
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly string ChatId;
+        private readonly string GroupID;
         public QueryMessageJob(IServiceProvider serviceProvider, IConfiguration configuration)
         {
             _serviceProvider = serviceProvider;
             ChatId = configuration.GetValue<string>("TelegramBotNotifyGroup");
+            GroupID = configuration.GetValue<string>("HRNotifyGroup");
         }
         public async Task Execute(IJobExecutionContext context)
         {
@@ -71,9 +73,10 @@ namespace TeamsApiBot.Jobs
                                         {
                                             string HRCheckText = "查岗通知：\r\n" + HRCheck.from.user.displayName + ": " + HRCheck.body.content + "\r\n" + HRCheck.createdDateTime;
                                             await _bot.SendTextMessageAsync(ChatId, HRCheckText);
+                                            await _bot.SendTextMessageAsync(GroupID, HRCheckText);
                                         }
 
-                                      
+
                                         ChatLastTimes[chat.id] = UnreadMessage.Max(s => DateTime.Parse(s.createdDateTime));
                                         foreach (var um in UnreadMessage)
                                         {
